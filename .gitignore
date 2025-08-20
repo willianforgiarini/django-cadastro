@@ -1,0 +1,25 @@
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+.Python
+.env
+.venv/
+venv/
+env/
+
+# Django
+db.sqlite3
+media/
+static_collected/
+staticfiles/
+
+# IDE specific files (example for VS Code)
+.vscode/
+
+# Operating System specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
