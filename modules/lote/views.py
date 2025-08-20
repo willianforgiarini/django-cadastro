@@ -70,7 +70,8 @@ class LoteView(ModelViewSet):
 
 
     @extend_schema(
-            responses=EdificacaoSerializer(many=True)
+            responses=EdificacaoSerializer(many=True),
+            description="Lista as edificações de um lote"
     )
     @action(methods=["GET"], detail=True, url_path="edificacoes", pagination_class=None)
     def get_edificacoes_por_lote(self, request, pk):

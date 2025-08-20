@@ -39,7 +39,15 @@ class ImobiliarioEdificacaoView(ModelViewSet):
 
 @extend_schema(
         responses=ImobiliarioSerializer(many=True),
-        parameters=[PointSerializer],
+        parameters=[
+            OpenApiParameter(
+                name="raio",
+                location=OpenApiParameter.QUERY,
+                required=True,
+                description="Raio em metros"
+            ),
+            PointSerializer
+        ],
         description="Lista imobiliarios dentro de um raio a partir de uma localização"
 )
 @api_view(["GET"])
